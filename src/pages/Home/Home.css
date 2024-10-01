@@ -1,0 +1,131 @@
+.hero {
+    position: relative;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto; /* Make the image responsive */
+    mask-image: linear-gradient(to right, transparent, black 80%, black 100%);
+}
+
+.hero-caption {
+    position: absolute;
+    width: 100%;
+    padding-left: 6%;
+    bottom: 10%; /* Position caption lower */
+    text-align: left;
+}
+
+.caption-img {
+    width: 70%; /* Reduced size of caption image */
+    max-width: 300px; /* Reduced max width */
+    margin-bottom: 10px; /* Space between image and buttons */
+    height: auto; /* Make the caption image responsive */
+}
+
+.hero-caption p {
+    max-width: 700px;
+    font-size: 14px; /* Reduced caption font size */
+    margin-bottom: 10px; /* Reduced margin below caption */
+}
+
+.hero-btns {
+    display: flex;
+    gap: 10px;
+    justify-content: left; /* Align buttons to the left */
+    margin-bottom: 30px; /* Space below the buttons */
+}
+
+.hero-btns .btn img {
+    width: 25px;
+}
+
+.hero-btns .btn {
+    border: 0;
+    outline: 0;
+    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    max-width: 200px; /* Medium-sized button */
+}
+
+.hero-btns .dark-btn {
+    color: white;
+    background-color: #6d6d6be3;
+}
+
+.hero-btns .btn:hover {
+    background-color: #ffffffbf;
+}
+
+.hero-btns .dark-btn:hover {
+    background-color: #6d6d6b66;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .hero-caption {
+        padding-left: 4%;
+    }
+
+    .hero-caption p {
+        font-size: 13px; /* Further reduce font size */
+    }
+
+    .caption-img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-caption {
+        padding-left: 3%;
+    }
+
+    .hero-caption p {
+        font-size: 12px; /* Further reduce font size */
+    }
+
+    .hero-btns {
+        justify-content: center; /* Center the buttons on smaller screens */
+    }
+
+    .hero-btns .btn {
+        max-width: 180px; /* Medium-sized button */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-caption {
+        padding-left: 2%;
+        text-align: center;
+    }
+
+    .hero-caption p {
+        display: none; /* Hide description on smaller screens */
+    }
+
+    .hero-btns {
+        margin-bottom: 30px;
+    }
+
+    .hero-btns .btn {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-caption {
+        padding-left: 1%;
+    }
+
+    .caption-img {
+        max-width: 80%;
+    }
+}
